@@ -17,8 +17,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-forest-dark/95 text-sand backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:py-4">
-        <Link href="/" onClick={() => setOpen(false)} className="font-display text-lg font-bold sm:text-xl">
-          Nature Design <span className="text-savanna">Safari</span>
+        <Link href="/" onClick={() => setOpen(false)} aria-label="Nature Design Safari Guide's - home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo/logo-horizontal-compact.svg"
+            alt="Nature Design Safari Guide's"
+            className="h-9 w-auto sm:h-11"
+          />
         </Link>
 
         <nav className="hidden gap-6 text-sm md:flex">

@@ -69,7 +69,7 @@ export default function Home() {
             controls
             muted
             playsInline
-            preload="metadata"
+            preload="none"
           />
         </div>
       </section>
@@ -81,8 +81,8 @@ export default function Home() {
           {wildlife.map((w) => <PhotoCard key={w.src} {...w} />)}
         </div>
         <div className="mt-6 grid gap-6 sm:grid-cols-2">
-          <video className="aspect-video w-full rounded-xl object-cover" src="/videos/wildlife/lions-hunting.mp4" controls muted playsInline preload="metadata" />
-          <video className="aspect-video w-full rounded-xl object-cover" src="/videos/wildlife/elephant-close-encounter.mp4" controls muted playsInline preload="metadata" />
+          <video className="aspect-video w-full rounded-xl object-cover" src="/videos/wildlife/lions-hunting.mp4" controls muted playsInline preload="none" />
+          <video className="aspect-video w-full rounded-xl object-cover" src="/videos/wildlife/elephant-close-encounter.mp4" controls muted playsInline preload="none" />
         </div>
       </section>
 

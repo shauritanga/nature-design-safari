@@ -1,18 +1,10 @@
 import Link from "next/link";
+import HeroVideo from "./HeroVideo";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-[75vh] items-center justify-center overflow-hidden bg-forest-dark py-16 text-center text-sand sm:min-h-[85vh]">
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/videos/migration/river-crossing-herd.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        aria-hidden="true"
-      />
+      <HeroVideo src="/videos/migration/river-crossing-herd.mp4" />
       <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/70 via-forest-dark/40 to-forest-dark/80" />
       <div className="relative z-10 px-4">
         <p className="mb-3 text-xs uppercase tracking-[0.25em] text-savanna-light sm:text-sm sm:tracking-[0.3em]">Nature Design Safari · Tanzania</p>
