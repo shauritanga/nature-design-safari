@@ -33,12 +33,12 @@ export default function Home() {
     <>
       <Hero />
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="mb-2 font-display text-3xl font-bold">Top Destinations</h2>
+      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <h2 className="mb-2 font-display text-2xl font-bold sm:text-3xl">Top Destinations</h2>
         <p className="mb-8 text-earth/70">Where to go for the best of Tanzania.</p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <PhotoCard src="/images/destinations/baobab-hollow.jpeg" title="Tarangire & the baobabs" text="Ancient trees and elephant herds." className="aspect-[4/5]" />
-          <PhotoCard src="/images/destinations/lake-viewpoint.jpeg" title="Lakes of the Rift Valley" text="Quiet shores and walking trails." className="aspect-[4/5]" />
+          <PhotoCard src="/images/destinations/baobab-hollow.jpeg" title="Tarangire & the baobabs" text="Ancient trees and elephant herds." className="aspect-[4/3] sm:aspect-[4/5]" />
+          <PhotoCard src="/images/destinations/lake-viewpoint.jpeg" title="Lakes of the Rift Valley" text="Quiet shores and walking trails." className="aspect-[4/3] sm:aspect-[4/5]" />
           <div className="flex flex-col gap-3 rounded-xl bg-white p-6 shadow">
             <h3 className="font-display text-xl font-semibold">More places to explore</h3>
             {destinations.map((d) => (
@@ -51,10 +51,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-forest py-16 text-sand">
+      <section className="bg-forest py-12 text-sand md:py-16">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2">
           <div>
-            <h2 className="font-display text-3xl font-bold">Witness the Great Migration</h2>
+            <h2 className="font-display text-2xl font-bold sm:text-3xl">Witness the Great Migration</h2>
             <p className="mt-4 text-sand/85">
               Thousands of wildebeest cross the rivers every year. We time your trip and position your guide
               so you are in the right place when it happens.
@@ -74,8 +74,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="mb-2 font-display text-3xl font-bold">Wildlife You&rsquo;ll Meet</h2>
+      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <h2 className="mb-2 font-display text-2xl font-bold sm:text-3xl">Wildlife You&rsquo;ll Meet</h2>
         <p className="mb-8 text-earth/70">Real sightings from our recent safaris.</p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {wildlife.map((w) => <PhotoCard key={w.src} {...w} />)}
@@ -86,37 +86,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-white py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-8 font-display text-3xl font-bold">Experiences We Organise</h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <h2 className="mb-8 font-display text-2xl font-bold sm:text-3xl">Experiences We Organise</h2>
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
             {experiences.map((e) => <PhotoCard key={e.src} {...e} className="aspect-[3/4]" />)}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="mb-8 font-display text-3xl font-bold">Where You&rsquo;ll Stay</h2>
+      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <h2 className="mb-8 font-display text-2xl font-bold sm:text-3xl">Where You&rsquo;ll Stay</h2>
         <div className="grid gap-6 sm:grid-cols-2">
           {stays.map((s) => <PhotoCard key={s.src} {...s} />)}
         </div>
       </section>
 
-      <section className="bg-forest-dark py-16 text-sand">
+      <section className="bg-forest-dark py-12 text-sand md:py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-3xl font-bold">Meet Your Guides</h2>
+          <h2 className="font-display text-2xl font-bold sm:text-3xl">Meet Your Guides</h2>
           <p className="mt-2 mb-8 text-sand/80">Local experts, a fleet of well-kept 4x4s, and a team that looks after you from arrival to departure.</p>
-          <PhotoCard src="/images/team/guides-with-fleet.jpeg" title="The Nature Design Safari team" className="aspect-[16/9]" />
+          <PhotoCard src="/images/team/guides-with-fleet.jpeg" title="The Nature Design Safari team" className="aspect-[4/3] sm:aspect-[16/9]" />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="mb-8 font-display text-3xl font-bold">Happy Travellers</h2>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <section className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <h2 className="mb-8 font-display text-2xl font-bold sm:text-3xl">Happy Travellers</h2>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {moments.map((m) => <PhotoCard key={m} src={m} title="" className="aspect-[3/4]" />)}
         </div>
         <div className="mt-12 text-center">
-          <Link href="/trip-planner" className="rounded-full bg-forest px-10 py-4 font-semibold text-sand hover:bg-forest-light">
+          <Link href="/trip-planner" className="block rounded-full bg-forest px-10 py-4 text-center sm:inline-block font-semibold text-sand hover:bg-forest-light">
             Start planning your Tanzania trip
           </Link>
         </div>

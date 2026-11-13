@@ -3,5 +3,16 @@
 @tailwind utilities;
 
 body {
-  @apply bg-sand text-earth;
+  @apply overflow-x-hidden bg-sand text-earth;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

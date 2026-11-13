@@ -12,9 +12,9 @@ export default function PhotoCard({
         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
         className="object-cover transition duration-500 group-hover:scale-105"
       />
-      <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-sand">
-        <h3 className="font-display text-lg font-semibold">{title}</h3>
-        {text && <p className="text-sm text-sand/85">{text}</p>}
+      <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-sand sm:p-4">
+        {title && <h3 className="font-display text-base font-semibold sm:text-lg">{title}</h3>}
+        {text && <p className="text-xs text-sand/85 sm:text-sm">{text}</p>}
       </figcaption>
     </figure>
   );
