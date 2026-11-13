@@ -1,9 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
 import HeroVideo from "./HeroVideo";
 
 export default function Hero() {
   return (
     <section className="relative flex min-h-[75vh] items-center justify-center overflow-hidden bg-forest-dark py-16 text-center text-sand sm:min-h-[85vh]">
+      <Image
+        src="/images/wildlife/elephant-from-vehicle.jpeg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
       <HeroVideo src="/videos/migration/river-crossing-herd.mp4" />
       <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/70 via-forest-dark/40 to-forest-dark/80" />
       <div className="relative z-10 px-4">
